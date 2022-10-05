@@ -11,6 +11,21 @@ import classes from "./Modal.module.css";
 import { Carousel } from "react-responsive-carousel";
 
 const Modal = ({ data, onClose }) => {
+  React.useEffect(() => {
+    const keyDownHandler = (event) => {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        //Closing the modal on pressing escape
+        onClose();
+      }
+    };
+    document.addEventListener("keydown", keyDownHandler);
+    //clean up event listener
+    return () => {
+      document.removeEventListener("keydown", keyDownHandler);
+    };
+  }, []);
+
   //   console.log(data);
   return ReactDOM.createPortal(
     <>
@@ -74,7 +89,20 @@ const Modal = ({ data, onClose }) => {
             <div className={classes.description}>
               <h2 className={classes.description__heading}>Description</h2>
               <p>
-               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis eaque officia ut consequatur debitis ad temporibus, repellat minima. Earum, officiis molestiae possimus quod nemo minima labore. Aspernatur incidunt maiores, officiis molestiae corporis recusandae minima perferendis architecto voluptatem fuga sed quaerat, praesentium reprehenderit blanditiis nobis maxime facilis. Ratione voluptate exercitationem, expedita perferendis adipisci accusantium placeat necessitatibus? Modi quis autem corporis sequi qui quas repellendus, expedita recusandae at veritatis doloremque ea adipisci illo amet saepe fugit sit dolore fuga, odit distinctio optio debitis perferendis! Provident expedita sed asperiores fuga, vel hic maiores doloribus exercitationem vero, dolorum alias nemo, nesciunt facere ad odit!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Corporis eaque officia ut consequatur debitis ad temporibus,
+                repellat minima. Earum, officiis molestiae possimus quod nemo
+                minima labore. Aspernatur incidunt maiores, officiis molestiae
+                corporis recusandae minima perferendis architecto voluptatem
+                fuga sed quaerat, praesentium reprehenderit blanditiis nobis
+                maxime facilis. Ratione voluptate exercitationem, expedita
+                perferendis adipisci accusantium placeat necessitatibus? Modi
+                quis autem corporis sequi qui quas repellendus, expedita
+                recusandae at veritatis doloremque ea adipisci illo amet saepe
+                fugit sit dolore fuga, odit distinctio optio debitis
+                perferendis! Provident expedita sed asperiores fuga, vel hic
+                maiores doloribus exercitationem vero, dolorum alias nemo,
+                nesciunt facere ad odit!
               </p>
             </div>
             <div className={classes.contact__seller}>
@@ -95,15 +123,14 @@ const Modal = ({ data, onClose }) => {
                   />
                 </div>
                 <div className={classes.agent__details}>
-                  <h4
-                  >
-                    Company Agent
-                  </h4>
+                  <h4>Company Agent</h4>
                   <p className={classes.phone}>+(12) 324 567 89</p>
                   <p className={classes.email}>companyagent@email.com</p>
                 </div>
               </div>
-              <button type="button" className={classes.request__button}>Request details</button>
+              <button type="button" className={classes.request__button}>
+                Request details
+              </button>
             </div>
           </div>
         </div>
