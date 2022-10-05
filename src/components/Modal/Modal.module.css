@@ -1,0 +1,200 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: max-content;
+  background-color: white;
+  border-radius: 5px;
+  padding: 15px;
+  z-index: 1001;
+}
+
+.modal__header {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.header__button {
+  background: #a1a1a1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.header__history,
+.header__views,
+.header__close {
+  display: flex;
+  align-items: center;
+  color: #a1a1a1;
+  font-size: 1.1rem;
+  gap: 5px;
+  margin-left: 1.1rem;
+}
+
+.header__close {
+  margin-left: auto;
+  cursor: pointer;
+  color: #666;
+}
+
+.heading {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.heading__title {
+  color: var(--primary);
+  margin-bottom: 5px;
+}
+
+.heading__details {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #a1a1a1;
+  font-size: 1.1rem;
+}
+
+.beds,
+.baths,
+.area {
+  display: flex;
+  align-items: center;
+  color: #666;
+  gap: 5px;
+  margin-left: 1.1rem;
+}
+
+.area sup {
+  font-size: 0.6rem;
+}
+
+.price {
+  margin-left: auto;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.modal__body {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.body__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.body__description {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+
+.description p {
+  font-size: 1.1rem;
+  color: #666;
+  padding-right: 1.1rem;
+  margin-bottom: 1.1rem;
+}
+
+.description__heading {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--primary);
+}
+
+.contact__seller {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: auto;
+  margin-bottom: 1rem;
+  width: 90%;
+  background: white;
+  font-size: 1.1rem;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 10px 15px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.agent__details__section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 0;
+  gap: 1rem;
+}
+
+.agent__image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.agent__image img {
+  width: 100%;
+  height: 100%;
+}
+
+.agent__details h4{
+    font-size: 1.1rem;
+    color: #3f427d;
+    margin-bottom: 5px;
+    font-weight: lighter;
+}
+
+.agent__details p{
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.request__button{
+    width: 100%;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.request__button:hover{
+    background: #3f427d;
+
+}

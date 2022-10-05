@@ -19,7 +19,7 @@ export default [
     id: 2,
     location: "USA",
     type: "Apartment",
-    title: "House in USA",
+    title: "Apartement in USA",
     price: "3200000",
     area: "8x10",
     bhk: "2",

@@ -104,6 +104,10 @@
   align-items: center;
 }
 
+.area sup{
+  font-size: 0.6rem;
+}
+
 .featured {
   margin-left: auto;
   color: white;

@@ -3,7 +3,7 @@ import Card from "./Card";
 import classes from "./Cards.module.css";
 import DummyData from "../../../DummyData";
 import Text from "./TextTransition/Text";
-
+import Modal from "../Modal/Modal";
 
 const Cards = ({ location, type, price, area, bhk }) => {
   /*Extracting the data from main state to filter the cards */
@@ -19,10 +19,16 @@ const Cards = ({ location, type, price, area, bhk }) => {
   // console.log(filterStateData);
 
   /*Filter the dummy data */
-  const filteredData = DummyData.filter(data => {
+  const filteredData = DummyData.filter((data) => {
     return (
-      (filterStateData.location === "Location" || data.location === filterStateData.location) &&
-      (filterStateData.type === "Type" || data.type === filterStateData.type) && (price === "Price" || (data.price >= filterStateData.priceLowerValue && data.price <= filterStateData.priceUpperValue)) && (area === "Area" || data.area === filterStateData.area) && (bhk === "BHK" || data.bhk === filterStateData.bhk)
+      (filterStateData.location === "Location" ||
+        data.location === filterStateData.location) &&
+      (filterStateData.type === "Type" || data.type === filterStateData.type) &&
+      (price === "Price" ||
+        (data.price >= filterStateData.priceLowerValue &&
+          data.price <= filterStateData.priceUpperValue)) &&
+      (area === "Area" || data.area === filterStateData.area) &&
+      (bhk === "BHK" || data.bhk === filterStateData.bhk)
     );
   });
 
