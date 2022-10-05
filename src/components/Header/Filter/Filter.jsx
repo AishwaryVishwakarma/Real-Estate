@@ -4,19 +4,19 @@ import Select from "../../Utilities/Select";
 import { GrPowerReset } from "react-icons/gr";
 
 const FILTER_OPTIONS = {
-  location: ["Location", "India", "USA", "Australia", "Singapore"],
-  type: ["Type", "House", "Apartment", "Villa", "Bungalow"],
-  price: ["Price", "10-20 Lakh", "20-30 Lakh", "30-40 Lakh", "40-50 Lakh"],
-  area: ["Area", "8x10 m2", "10x10 m2", "12x10 m2", "14x10 m2"],
-  bhk: ["BHK", "1 BHK", "2 BHK", "3 BHK", "4 BHK"],
+  location: ["Any", "India", "USA", "Australia", "Singapore"],
+  type: ["Any", "House", "Apartment", "Villa", "Bungalow"],
+  price: ["Any", "10-20 Lakh", "20-30 Lakh", "30-40 Lakh", "40-50 Lakh"],
+  area: ["Any", "8x10 m2", "10x10 m2", "12x10 m2", "14x10 m2"],
+  bhk: ["Any", "1 BHK", "2 BHK", "3 BHK", "4 BHK"],
 };
 
 const DATA = {
-  location: "Location",
-  type: "Type",
-  price: "Price",
-  area: "Area",
-  bhk: "BHK",
+  location: "Any",
+  type: "Any",
+  price: "Any",
+  area: "Any",
+  bhk: "Any",
 };
 
 const Filter = (props) => {

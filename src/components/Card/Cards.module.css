@@ -1,6 +1,37 @@
-.hero{
+.hero {
   /* border: 1px solid red; */
   margin-top: -6rem;
+}
+
+.empty__list {
+  text-align: center;
+  margin-top: 5rem;
+  animation-iteration-count: infinite;
+  animation-name: glitch-pop;
+  animation-duration: 1s;
+}
+
+.empty__list p {
+  font-size: 1.4rem;
+  color: #000;
+}
+
+@keyframes glitch-pop {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .cards__section {
@@ -35,18 +66,24 @@
   .cards__section {
     grid-template-columns: repeat(1, minmax(300px, 1fr));
   }
+  .empty__list p {
+    font-size: 1.2rem;
+  }
 }
 
 /*480px*/
 @media screen and (max-width: 480px) {
-  .cards__section{
+  .cards__section {
     padding: 0 0.5rem;
+  }
+  .empty__list p {
+    font-size: 1rem;
   }
 }
 
 /*320px*/
 @media screen and (max-width: 320px) {
-  .cards__section{
+  .cards__section {
     padding: 0 0.2rem;
   }
 }

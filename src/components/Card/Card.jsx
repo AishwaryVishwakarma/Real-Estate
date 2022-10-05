@@ -48,6 +48,7 @@ function Card(props) {
             </div>
             <p className={classes.title}>{props.title}</p>
             <p className={classes.address}>{props.address}</p>
+            <div className={classes.line__break}/>
             <div className={classes.footer__section}>
               <div className={classes.bhk}>
                 <BiBed className={classes.footer__logo} />

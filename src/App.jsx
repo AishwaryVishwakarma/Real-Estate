@@ -7,11 +7,11 @@ import Navbar from "./components/Navbar/Navbar";
 function App() {
   /*Maintaining main state for the filter */
   const [filter, setFilter] = React.useState({
-    location: "Location",
-    type: "Type",
-    price: "Price",
-    area: "Area",
-    bhk: "BHK",
+    location: "Any",
+    type: "Any",
+    price: "Any",
+    area: "Any",
+    bhk: "Any",
   });
 
   function changeOptionHandler(data) {

@@ -21,14 +21,14 @@ const Cards = ({ location, type, price, area, bhk }) => {
   /*Filter the dummy data */
   const filteredData = DummyData.filter((data) => {
     return (
-      (filterStateData.location === "Location" ||
+      (filterStateData.location === "Any" ||
         data.location === filterStateData.location) &&
-      (filterStateData.type === "Type" || data.type === filterStateData.type) &&
-      (price === "Price" ||
+      (filterStateData.type === "Any" || data.type === filterStateData.type) &&
+      (price === "Any" ||
         (data.price >= filterStateData.priceLowerValue &&
           data.price <= filterStateData.priceUpperValue)) &&
-      (area === "Area" || data.area === filterStateData.area) &&
-      (bhk === "BHK" || data.bhk === filterStateData.bhk)
+      (area === "Any" || data.area === filterStateData.area) &&
+      (bhk === "Any" || data.bhk === filterStateData.bhk)
     );
   });
 
@@ -36,24 +36,30 @@ const Cards = ({ location, type, price, area, bhk }) => {
     <>
       <div className={classes.hero}>
         <Text />
-        <div className={classes.cards__section}>
-          {filteredData.map((item) => {
-            return (
-              <Card
-                key={item.id}
-                location={item.location}
-                type={item.type}
-                price={item.price}
-                title={item.title}
-                address={item.address}
-                bhk={item.bhk}
-                area={item.area}
-                featured={item.featured}
-                images={item.images}
-              />
-            );
-          })}
-        </div>
+        {filteredData.length === 0 ? (
+          <div className={classes.empty__list}>
+            <p>Oops! The list seems Empty</p>
+          </div>
+        ) : (
+          <div className={classes.cards__section}>
+            {filteredData.map((item) => {
+              return (
+                <Card
+                  key={item.id}
+                  location={item.location}
+                  type={item.type}
+                  price={item.price}
+                  title={item.title}
+                  address={item.address}
+                  bhk={item.bhk}
+                  area={item.area}
+                  featured={item.featured}
+                  images={item.images}
+                />
+              );
+            })}
+          </div>
+        )}
       </div>
     </>
   );
