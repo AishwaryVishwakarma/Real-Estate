@@ -7,8 +7,16 @@
   background: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   height: 4rem;
-  /* border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem; */
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.selected{
+  background-color: var(--primary);
+  color: white;
+  border-radius: 5px;
+  padding: 5px 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .nav__items {
@@ -120,6 +128,9 @@
     padding: 0 0.5rem;
     height: 3.5rem;
   }
+  .selected{
+    padding: 3px 5px;
+  }
   .nav__items li:not(.heading) {
     margin: 0 0.2rem;
   }
@@ -142,6 +153,9 @@
   .navbar {
     padding: 0 0.5rem;
     height: 2.7rem;
+  }
+  .selected{
+    padding: 2px 4px;
   }
   .nav__items li:not(.heading) {
     margin: 0 0.2rem;
