@@ -51,19 +51,21 @@ const Modal = ({ data, onClose }) => {
           <h1 className={classes.heading__title}>{data.title}</h1>
           <div className={classes.heading__details}>
             <p className={classes.heading__address}>{data.address}</p>
-            <div className={classes.beds}>
-              <FaBed className={classes.beds__icon} />
-              <p>{data.bhk} Beds</p>
-            </div>
-            <div className={classes.baths}>
-              <FaBath className={classes.baths__icon} />
-              <p>{Number(data.bhk) + 1} Baths</p>
-            </div>
-            <div className={classes.area}>
-              <BsArrowsMove className={classes.area__icon} />
-              <p>
-                {data.area} m<sup>2</sup>
-              </p>
+            <div className={classes.heading__utilities}>
+              <div className={classes.beds}>
+                <FaBed className={classes.beds__icon} />
+                <p>{data.bhk} Beds</p>
+              </div>
+              <div className={classes.baths}>
+                <FaBath className={classes.baths__icon} />
+                <p>{Number(data.bhk) + 1} Baths</p>
+              </div>
+              <div className={classes.area}>
+                <BsArrowsMove className={classes.area__icon} />
+                <p>
+                  {data.area} m<sup>2</sup>
+                </p>
+              </div>
             </div>
             <p className={classes.price}>Rs. {data.price}</p>
           </div>
@@ -89,30 +91,17 @@ const Modal = ({ data, onClose }) => {
             <div className={classes.description}>
               <h2 className={classes.description__heading}>Description</h2>
               <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Corporis eaque officia ut consequatur debitis ad temporibus,
-                repellat minima. Earum, officiis molestiae possimus quod nemo
-                minima labore. Aspernatur incidunt maiores, officiis molestiae
-                corporis recusandae minima perferendis architecto voluptatem
-                fuga sed quaerat, praesentium reprehenderit blanditiis nobis
-                maxime facilis. Ratione voluptate exercitationem, expedita
-                perferendis adipisci accusantium placeat necessitatibus? Modi
-                quis autem corporis sequi qui quas repellendus, expedita
-                recusandae at veritatis doloremque ea adipisci illo amet saepe
-                fugit sit dolore fuga, odit distinctio optio debitis
-                perferendis! Provident expedita sed asperiores fuga, vel hic
-                maiores doloribus exercitationem vero, dolorum alias nemo,
-                nesciunt facere ad odit!
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Inventore, sed dolorem temporibus similique veritatis
+                consequatur reiciendis sunt, corrupti dolore iure, veniam
+                molestiae quidem incidunt id delectus optio. Sequi rem optio
+                tenetur nobis? Enim veniam reiciendis rerum, pariatur voluptate
+                quos culpa modi repellat aliquam, ullam non dolorem nihil odio
+                nostrum repudiandae.
               </p>
             </div>
             <div className={classes.contact__seller}>
-              <h4
-                style={{
-                  fontSize: "1.4rem",
-                  color: "#634264",
-                  fontWeight: "600",
-                }}
-              >
+              <h4 className={classes.contact__seller__heading}>
                 Contact an Agent
               </h4>
               <div className={classes.agent__details__section}>
@@ -123,7 +112,7 @@ const Modal = ({ data, onClose }) => {
                   />
                 </div>
                 <div className={classes.agent__details}>
-                  <h4>Company Agent</h4>
+                  <h5>Company Agent</h5>
                   <p className={classes.phone}>+(12) 324 567 89</p>
                   <p className={classes.email}>companyagent@email.com</p>
                 </div>

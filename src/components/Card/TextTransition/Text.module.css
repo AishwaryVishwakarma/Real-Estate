@@ -4,7 +4,6 @@
   width: fit-content;
   margin: 0 auto;
   gap: 5px;
-  /* margin-top: -1rem; */
   margin-bottom: 2rem;
 }
 
@@ -19,4 +18,55 @@
   color: var(--primary);
   font-weight: 700;
   font-size: 1.8rem;
+}
+
+/*Responsive*/
+
+/*1024px*/
+@media screen and (max-width: 1024px) {
+  .heading {
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/*768px*/
+@media screen and (max-width: 768px) {
+  .heading {
+    margin-top: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/*576px*/
+@media screen and (max-width: 576px) {
+  .heading {
+    margin-top: 4.5rem;
+  }
+  .heading pre {
+    font-size: 1.1rem;
+  }
+  .heading h1 {
+    font-size: 1.6rem;
+  }
+}
+
+/*480px*/
+@media screen and (max-width: 480px) {
+  .heading {
+    margin-top: 8rem;
+  }
+}
+
+/*320px*/
+@media screen and (max-width: 320px) {
+  .heading {
+    margin-top: 8.5rem;
+  }
+  .heading pre {
+    font-size: 1rem;
+  }
+  .heading h1 {
+    font-size: 1.5rem;
+  }
 }

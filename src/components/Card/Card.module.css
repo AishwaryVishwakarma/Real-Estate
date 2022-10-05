@@ -32,6 +32,7 @@
 .card__image {
   width: 100%;
   height: 200px;
+  margin-bottom: 1rem;
 }
 
 .card__image:hover {
@@ -116,4 +117,42 @@
   border-radius: 5px;
   background-color: var(--primary);
   font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+/*Responsive*/
+
+/*1200px*/
+@media screen and (max-width: 1200px) {
+  .card {
+    margin: 10px;
+  }
+}
+
+/*1024px*/
+@media screen and (max-width: 1024px) {
+  .card {
+    margin: 10px;
+  }
+}
+
+/*768px*/
+@media screen and (max-width: 768px) {
+  .card {
+    margin: 10px;
+  }
+}
+
+/*480px*/
+@media screen and (max-width: 480px) {
+  .card {
+    margin: 10px;
+  }
+}
+
+/*368px*/
+@media screen and (max-width: 368px) {
+  .card {
+    margin: 10px;
+    max-width: 280px;
+  }
 }

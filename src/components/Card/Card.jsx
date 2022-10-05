@@ -14,7 +14,7 @@ function Card(props) {
   /*Add commas to price*/
   const price = props.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
-  return (
+  return ( 
     <>
       {isOpen && (
         <Modal
